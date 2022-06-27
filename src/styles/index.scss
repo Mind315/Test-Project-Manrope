@@ -1,0 +1,244 @@
+@import "~normalize.css";
+
+// VARIABLES
+$cian: #3ee9e5;
+$blue: #093f68;
+$gray: #777f98;
+$white: #ffffff;
+$darkblue: #080c20;
+$pink: #ff2965;
+
+// INITIAL
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+ul,
+ol {
+    list-style-type: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1140px;
+    text-align: center;
+}
+.body {
+    background-color: $darkblue;
+    color: $white;
+    font-family: "Manrope", sans-serif;
+}
+.cian-text {
+    color: $cian;
+}
+
+// ----------- main-section
+.main {
+    position: relative;
+    padding-bottom: 150px;
+
+    .logo {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        &__img {
+        }
+        &__text {
+            display: inline;
+        }
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 56px;
+        padding-top: 300px;
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        color: $gray;
+        max-width: 540px;
+        margin: 0 auto;
+        padding-top: 24px;
+    }
+    &__to-down {
+        width: 26px;
+        height: 42px;
+        border: none;
+        outline: none;
+        background-image: url("../assets/images/scroll-down.svg");
+        background-color: transparent;
+        margin-top: 46px;
+        cursor: pointer;
+        transition: transform 0.5s;
+        &:hover {
+            transform: translateY(10px);
+        }
+    }
+}
+
+// --------- description
+.description {
+    padding-bottom: 150px;
+    &__card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &__card {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: left;
+        & h4 {
+            margin-top: 48px;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        & p {
+            margin-top: 20px;
+            font-size: 15px;
+            line-height: 25px;
+            color: $gray;
+        }
+    }
+}
+// ---------- prices
+.prices {
+    padding-bottom: 150px;
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 44px;
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 540px;
+        color: $gray;
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+    &__card-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 120px;
+    }
+    &__card {
+        border-radius: 8px;
+        max-width: 369px;
+        padding: 48px 38px;
+        text-align: left;
+        & h4 {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            color: $gray;
+            margin-top: 20px;
+        }
+        &-price {
+            margin-top: 24px;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 55px;
+            & span {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 25px;
+                vertical-align: middle;
+            }
+        }
+        &-price + ul {
+            margin-top: 20px;
+            margin-left: 26px;
+        }
+        & li {
+            position: relative;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        & li:not(:last-child) {
+            padding-bottom: 10px;
+        }
+        & li::before {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 7px;
+            top: 5px;
+            left: -26px;
+            border: 2px solid $cian;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+        }
+    }
+    &__card + &__card {
+        margin-left: 30px;
+    }
+}
+.card-left {
+    background-color: $blue;
+}
+.card-right {
+    background-color: #3ee9e5;
+}
+
+//  ------------------------- form
+.form {
+    padding-bottom: 160px;
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 42px;
+    }
+    & input {
+        background-color: $blue;
+        border: none;
+        outline: none;
+        padding: 13px 16px;
+        border-radius: 24px;
+        min-width: 284px;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+        &:focus {
+            border: 2px solid #3ee9e5;
+        }
+    }
+    & button {
+        border: none;
+        outline: none;
+        background-color: $cian;
+        border-radius: 24px;
+        color: $darkblue;
+        padding: 13px 23px;
+        margin-left: 16px;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+            border: 2px solid #3ee9e5;
+        }
+    }
+}
